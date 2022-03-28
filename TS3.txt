@@ -1,0 +1,86 @@
+// Enum Type
+enum Directions {
+  Up,
+  Down,
+  Left,
+  Right
+}
+
+Directions.Up;      // 0
+Directions.Down;    // 1
+Directions.Left;    // 2
+Directions.Right;   // 3
+
+
+// Reverse enum
+enum Directions {
+  Up,
+  Down,
+  Left,
+  Right
+}
+
+Directions[]  // "Up"
+Directions[]  // "Down"
+Directions[]  //  "Left"
+Directions[]  //  "Right"
+
+
+// Custom index for enum elements
+enum Directions {
+  Up = 2,
+  Down = 4,
+  Left = 6,
+  Right = 8
+}
+
+Directions.Up;   // "Up"
+Directions.Down; // "Down"
+Directions[6];   // "Left"
+Directions[8];   // "Right"
+
+
+// Custom name for keys
+enum links {
+  youtube = 'https://youtube.com',
+  vk = 'https://vk.com',
+  facebook = 'https://facebook.com'
+}
+
+// Using
+links.vk        // "https://vk.com"
+links.youtube   // "https://youtube.com"
+
+
+// Compiled code
+"use strict";
+var links;
+(fuction (links) {
+  links["youtube"] = "https://youtube.com";
+  links["vk"] = "https://vk.com";
+  links["facebook"] = "https://facebook.com";
+})(links || (links = {}));
+
+
+// Compiled code
+"use strict";
+var Directions;
+(function(Directions){
+  Directions[Directions]["Up"] = 0] = "Up"
+  Directions[Directions]["Down"] = 1] = "Down"
+  Directions[Directions]["Left"] = 2] = "Left"
+  Directions[Directions]["Right"] = 3] = "Right";
+})(Directions || (Directions = {}));
+
+
+// const enum (without using)
+const enum links {
+  youtube = 'https://youtube.com',
+  vk = 'https://vk.com',
+  facebook = 'https://facebook.com'
+}
+
+// Compiled code is empty
+"use strict";
+
+
